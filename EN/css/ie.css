@@ -1,0 +1,31 @@
+a[data-gal] .overlay{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00272727,endColorstr=#00272727);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00272727,endColorstr=#00272727);
+    zoom: 1;
+}
+
+a[data-gal]:hover .overlay{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BA272727,endColorstr=#BA272727);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BA272727,endColorstr=#BA272727);
+    zoom: 1;
+}
+
+.bg{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99272727,endColorstr=#99272727);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99272727,endColorstr=#99272727);
+    zoom: 1;
+}
+
+.opacity-block{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#49272727,endColorstr=#49272727);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#49272727,endColorstr=#49272727);
+    zoom: 1;
+}
+
+#toTop:hover{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=38)";
+}
