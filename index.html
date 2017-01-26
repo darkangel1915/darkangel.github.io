@@ -45,8 +45,8 @@
 
 	  function choose(){
 
-      var res = Math.floor(Math.random() * 4) + 1;
-      //alert(res);
+      var res = Math.floor(Math.random() * 3) + 1;     
+      //alert(res);                       ^ este no. es el número de opciones.
 
 	      if(res == 1 ) { 
 	      	var code1 = '<video autoplay loop poster="video_1.jpg" id="bgvid"><source src="video_1.mp4" type="video/mp4"></source><source src="video_1.webm" type="video/webm"></source></video>';
@@ -62,10 +62,10 @@
 	        var code2 = '<video autoplay loop poster="video_3.jpg" id="bgvid"><source src="video_3.mp4" type="video/mp4"></source><source src="video_3.webm" type="video/webm"></source></video>';
 			document.body.innerHTML = code2;
 	      }
-		   if(res == 4 ) { 
+		   /*if(res == 4 ) { 
 	        var code2 = '<video autoplay loop poster="video_4.jpg" id="bgvid"><source src="video_4.mp4" type="video/mp4"></source><source src="video_4.webm" type="video/webm"></source></video>';
 			document.body.innerHTML = code2;
-	      }
+	      }*/
 	      
       }
 
@@ -111,7 +111,7 @@
         #logo { position:absolute; 
               top:50%;
               left: 50%;
-              margin-top: -130px;
+              margin-top: -100px; /*Original 130 Photo*/
               margin-left: -350px;
         }
         #boton1 { position:absolute; 
@@ -175,7 +175,7 @@
       <source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4"></source>
     </video>-->
     <div>
-        <div id="logo"> <img src="/font/logo_color.png" margin-top: -100px; margin-left: -300px;> </div>
+        <div id="logo"> <img src="/font/logo_color_2.png" margin-top: -100px; margin-left: -300px;> </div>
 
         <div id="boton1">
           <a href="/EN/home.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEnglish&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
