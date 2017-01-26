@@ -12,11 +12,46 @@
     <script src="js/jquery-migrate-1.2.1.js"></script>
     <script src="js/TMForm.js"></script>
     <script src="js/modal.js"></script>
-    <!--Contact-->
+    <!--FormSpree-->
+    <script type="text/javascript">
+		$(document).ready(function() {
+		  $('#contact-form').submit(function(e) {
+			var name    = document.getElementById('inputName')
+			var email   = document.getElementById('inputEmail')
+			var phone   = document.getElementById('inputPhone')
+			var message = document.getElementById('inputMessage')
+		
+			if (!name.value || !email.value || !phone.value || !message.value) {
+			  alertify.error("Please check your entries");
+			  return false;
+			} else {
+			  $.ajax({
+				method: 'POST',
+				url: '//formspree.io/darkangel1915@gmail.com',
+				data: $('#contact-form').serialize(),
+				datatype: 'json'
+			  });
+			  e.preventDefault();
+			  $(this).get(0).reset();
+			  alertify.success("MESAGGE SENT..........");
+			}
+		  });
+		});
+    
+    </script>
+    <!--OLD Contact-->
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/modal.js"></script>
 	<script type="text/javascript" src="js/bootstrap-filestyle.js"></script>
-	<script type="text/javascript" src="js/TMForm.js"></script>
+	<!--<script type="text/javascript" src="js/TMForm.js"></script>-->
+    
+    <!--NEW Contact-->
+    <link rel="stylesheet" href="css/alertify.css">
+	<link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/alertify.rtl.css">
+	<link rel="stylesheet" href="css/default.rtl.css">
+    <script type="text/javascript" src="js/alertify.js"></script>
+	<script type="text/javascript" src="js/alertify.min.js"></script>
     
     <!--[if (gt IE 9)|!(IE)]><!-->
     <script src="js/wow/wow.js"></script>
@@ -58,7 +93,7 @@
                                 <a href="home.html">Luis Uribe</a>
                             </h1>
 
-                            <center><div class="second-word"><p>Photography</p></div></center>
+                            <center><div class="second-word"><p>Creative</p></div></center>
                         </div>
 
                         <div class="put-right social-list"> 
@@ -88,7 +123,7 @@
                                     <a href="home.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="projects.html">Projects</a>
+                                    <a href="video.html">Video</a>
                                     <!--<ul>
                                         <li>
                                             <a href="#">History</a>
@@ -110,7 +145,7 @@
                                     </ul>-->
                                 </li>
                                 <li>
-                                    <a href="video.html">Video</a>
+                                    <a href="photo.html">Photo</a>
                                 </li>
                                 <li>
                                     <a href="http://www.luisosplace.tumblr.com" target="_blank">Blog</a>
@@ -153,7 +188,7 @@
                         </div>
                         <div class="grid_3">
                             <h6 class="heading_ color_5 text_5">
-                                Luis Uribe Photography.
+                                Luis Uribe
                             </h6>
                             <br>
                             <!--<address>
@@ -196,10 +231,16 @@
                     <div class="heading_2 text_3 color_5 h3-wrap">
                         <h3>I hear you</h3>
                     </div>
-
                     <div class="form-wrapper">
-                        <form action="http://formspree.io/luis@luisuribe.mx" id="contact-form">
-                            <div class="contact-form-loader"></div>
+                    	<!--
+                    	<form action="http://formspree.io/luis@luisuribe.mx" method="post">
+                          <input type="email" name="_replyto">
+                          <textarea name="body"></textarea>
+                          <input type="submit" value="Send">
+                        </form>
+                        -->
+                       <!-- <form id="contact-form-fontspree">
+                            <div class="contact-form-loader" action="//formspree.io/luis@luisuribe.mx" method="post"></div>
                             <fieldset>
 
                                 <label class="name">
@@ -249,10 +290,51 @@
                                     </div>
                                 </div>
                             </div>
+                        </form> -->
+                         	
+                        <form id="contact-form">
+                            <fieldset>
+
+                                <label for="inputName" class="name">
+                                    <input id="inputName" type="text" name="name" placeholder="Name:" value="" required/>
+                                </label>
+
+                                <label for="inputMail" class="email">
+                                    <input id="inputEmail" type="text" name="email" placeholder="E-mail:" value="" required/>
+                                </label>
+
+                                <label for="inputPhone" class="phone">
+                                    <input id="inputPhone" type="text" name="phone" placeholder="Phone:" value="" required/>
+                                </label>
+
+                                <label for="inputMessage" class="message">
+                                    <textarea id="inputMessage" name="message" placeholder="Message:" value="" required
+                                    ></textarea>
+                                </label>
+
+                                <div class="btn-wrapper">
+                                    <!--<a class="btn color_4" href="#" data-type="reset">Clear</a>-->
+                                    <!--<a class="btn color_4" href="#" data-type="submit">Send</a>-->
+                                    <input class="btn color_4" type="reset" value="Clear">
+                                    <input class="btn color_4" type="submit" id="email-submit-btn" value="Send">   
+                                </div>
+                            </fieldset>
+                            <!--<div class="modal fade response-message">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">Modal title</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            I have your message! I'll catch you up shortly.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
                         </form>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -269,7 +351,7 @@
             <div class="box">
                 <div class="grid_12">
                     <div class="heading text_9 color_10">
-                        <h4> Wanna see more? check out my  <a href="projects.html" class="color_8">portfolio</a></h4>
+                        <h4> Wanna see more? check out my  <a href="video.html" class="color_8">work</a></h4>
                         <p class="color_8 text_10">Like what you see? Get in touch with
                             <a rel="nofollow" class="color_1" href="contact.html">me</a>
                         </p>

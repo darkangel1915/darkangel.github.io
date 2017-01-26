@@ -1250,8 +1250,14 @@ a[data-gal]:hover .hover {
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+    /*padding-top: 30px; this is A MARGIN FOR BLACK BARS WHITHIN THE VIDEO*/ height: 0; overflow: hidden;
 }
+
+/*.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}*/
  
 .video-container iframe,
 .video-container object,
@@ -1259,6 +1265,7 @@ a[data-gal]:hover .hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 95%;
-    height: 90%;
+    width: 100%; /* READ: The original value was 95 but changed it to fit my new video portfolio */
+    height: 100%; /* READ: The original value was 90 but changed it to fit my new video portfolio */
 }
+
