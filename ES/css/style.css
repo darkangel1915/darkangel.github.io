@@ -7,6 +7,7 @@
 /*========================================================
                     Main layout styles
 =========================================================*/
+
 .Bbutton{
 	display:block;
 	position:relative;
@@ -33,7 +34,6 @@
 		display: none;
 	}
 }
-
 
 @font-face {
   font-family:Kirvy;
@@ -265,7 +265,7 @@ a[data-gal]:hover .hover {
   text-transform: none;
   color: #ffffff;
   /*font-family: 'Kirvy', sans-serif;*/
-  font: 300 14px/30px Kirvy, sans-serif;    /*Roboto Condensed*/
+  font: 300 15px/30px Kirvy, sans-serif;    /*Roboto Condensed*/
   font-style: normal;
   font-weight:500;
   letter-spacing: 1px; /*1px*/
@@ -1193,11 +1193,10 @@ a[data-gal]:hover .hover {
   font: 300 14px/40px 'Roboto Condensed', sans-serif;
   text-align: justify;
 }
-.text_14 {
-  font: 100 17px/50px 'Roboto Condensed', sans-serif;
+.text_14 { /*create for custom text in about section*/
+  font: 200 16px/60px 'Roboto Condensed', sans-serif;
   text-align: justify;
 }
-
 .italic {
   font-style: italic;
 }
@@ -1268,4 +1267,3 @@ a[data-gal]:hover .hover {
     width: 100%; /* READ: The original value was 95 but changed it to fit my new video portfolio */
     height: 100%; /* READ: The original value was 90 but changed it to fit my new video portfolio */
 }
-

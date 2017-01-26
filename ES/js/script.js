@@ -34,18 +34,7 @@ $(function () {
     $().UItoTop({ easingType: 'easeOutQuart' });
 });
 
-/* ToBottom =============================================*/
 
-$('#').on("click", function () {
-	var percentageToScroll = 35; /*percentage of movement*/
-	var percentage = percentageToScroll / 100;
-	var height = $(document).height() - $(window).height();
-	var scrollAmount = height * percentage;
-	console.log('scrollAmount: ' + scrollAmount);
-	jQuery("html, body").animate({
-		scrollTop: scrollAmount
-	}, 500); /*velocity of scroll*/
-});
 
 /* DEVICE.JS AND SMOOTH SCROLLIG
  ========================================================*/
