@@ -24,6 +24,25 @@
 }
 /* Contact Form Input
 ========================================================*/
+#contact-form input[type='email'] {
+  background-color: #ffffff;
+  border-radius: 0;
+  line-height: 18px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  padding: 11px 17px 7px 15px;
+  color: #adadad;
+  outline: none;
+  height: 42px;
+  border: 1px solid #e4e4e4;
+  font-weight: 300;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-appearance: none;
+}
 #contact-form input[type='text'] {
   background-color: #ffffff;
   border-radius: 0;
